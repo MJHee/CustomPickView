@@ -7,7 +7,6 @@
 //
 
 #import "PickView.h"
-#import "AppDelegate.h"
 
 //顶部nav导航+状态条
 #define kScreenW [UIScreen mainScreen].bounds.size.width
@@ -106,9 +105,7 @@ alpha: alphaValue]
 }
 
 - (void)show {
-
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [delegate.window addSubview:self];
+    [[UIApplication sharedApplication].delegate.window addSubview:self];
     self.alpha = 0;
     [UIView animateWithDuration:0.3 animations:^{
 
